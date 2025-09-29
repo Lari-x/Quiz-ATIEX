@@ -1,0 +1,251 @@
+/* -------------------- RESET E FONTES -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background-image: url('/css/imagens/fundo_tela.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------- APP / QUIZ -------------------- */
+.app {
+    position: relative; /* necessário para o ícone da casinha */
+    background: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    color: #333;
+    transition: all 0.3s;
+}
+
+/* Título do quiz */
+.app h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(195, 114, 114, 0.1);
+}
+
+/* Pergunta */
+.quiz h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Alternativas */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff3838, #ff3a3a); /* vermelho suave */
+    color: #fff !important;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Hover das alternativas */
+.btn:hover {
+    background: linear-gradient(135deg, #e02b2b, #c51e1e);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Alternativa selecionada */
+.btn.selected {
+    background: linear-gradient(135deg, #2fa94c, #2ac14d);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Botão Próxima */
+#next-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+
+    /* FIXO NO CANTO INFERIOR DIREITO */
+    display: inline-block;
+    margin-top: 20px;
+    right: 20px;
+}
+
+#next-btn:hover {
+    background-color: #ff0101;
+    transform: scale(1.05);
+}
+
+/* Botão Reiniciar */
+button.restart-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000; /* preto */
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button.restart-btn:hover {
+    background-color: #ff0101; /* vermelho ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Resultado */
+.result {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Ícone home */
+.home-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #030303;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-icon:hover {
+    color: #ff0101;
+    transform: scale(1.1);
+}
+
+/* -------------------- CARDS ADICIONAIS -------------------- */
+.quiz-card,
+.cadastro-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin: 20px auto;
+    padding: 40px;
+    transition: all 0.3s;
+}
+
+.quiz-card {
+    width: 80%;
+    max-width: 1200px;
+    min-height: 400px; /* mais flexível */
+    display: flex;
+    align-items: center;
+}
+
+.cadastro-card {
+    width: 80%;
+    max-width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Quiz / cadastro texto */
+.quiz-text,
+.cadastro-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Quiz título */
+.quiz-text h2,
+.cadastro-card h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* -------------------- FORMULÁRIO CADASTRO -------------------- */
+.cadastro-card form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastro-card form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Botões dentro de container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button-container button,
+.button-container a#next-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.button-container button:hover,
+.button-container a#next-btn:hover {
+    background-color: #cc0000;
+}
+
+/* -------------------- RESPONSIVO -------------------- */
+@media (max-width: 768px) {
+    .quiz-card,
+    .cadastro-card {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .quiz-card {
+        align-items: center;
+    }
+
+    .cadastro-card {
+        align-items: center;
+    }
+}

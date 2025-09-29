@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Quiz Vocacional Marvel</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cadastro-card">
+        <h2>Queremos te conhecer!</h2>
+        <p>Preencha seus dados e comece a explorar o quiz vocacional!</p>
+
+        <form id="form-cadastro">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@.com" required>
+
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" placeholder="Sua idade" required>
+
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado" placeholder="Seu estado" required>
+
+            <div class="button-container">
+                <a href="/html/quiz_perguntas.html" id="next-btn">Cadastrar e começar quiz</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
